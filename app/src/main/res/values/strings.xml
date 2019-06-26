@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Training_AppBunlde</string>
+    <string name="title_dynamic_feature">Module Title</string>
+    <string name="title_dynamic_feature2">Messanger</string>
+    <string name="network_error">Network is error</string>
+    <string name="module_unavailable">Unavailable module</string>
+    <string name="invalid_request">Invalid request</string>
+    <string name="downloading">Downloading</string>
+    <string name="downloaded">Dowloaded</string>
+    <string name="installed">Installed</string>
+    <string name="failed">Failed</string>
+    <string name="installing">Installing</string>
+    <string name="canceling">Canceling</string>
+</resources>

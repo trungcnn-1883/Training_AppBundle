@@ -1,0 +1,12 @@
+<manifest
+        xmlns:dist="http://schemas.android.com/apk/distribution"
+        split="dynamic_feature2"
+        package="com.example.dynamic_feature2">
+    <dist:module
+            dist:onDemand="true"
+            dist:instant="false"
+            dist:title="@string/title_dynamic_feature2">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+</manifest>
+
