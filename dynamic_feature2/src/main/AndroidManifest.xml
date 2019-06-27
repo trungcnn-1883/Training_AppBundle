@@ -1,12 +1,19 @@
-<manifest
-        xmlns:dist="http://schemas.android.com/apk/distribution"
-        split="dynamic_feature2"
-        package="com.example.dynamic_feature2">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.example.dynamic_feature2"
+          split="dynamic_feature2">
+
     <dist:module
-            dist:onDemand="true"
             dist:instant="false"
+            dist:onDemand="true"
             dist:title="@string/title_dynamic_feature2">
         <dist:fusing dist:include="true"/>
     </dist:module>
-</manifest>
 
+    <application>
+        <activity android:name=".ChatActivity">
+        </activity>
+    </application>
+
+</manifest>

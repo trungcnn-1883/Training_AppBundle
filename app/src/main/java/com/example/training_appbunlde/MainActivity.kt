@@ -1,5 +1,6 @@
 package com.example.training_appbunlde
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ import com.google.android.play.core.splitinstall.SplitInstallRequest
 import com.google.android.play.core.splitinstall.model.SplitInstallErrorCode
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION
+import com.example.mylibrary.MyLibActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,12 +27,15 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mDownLoadF2Btn: Button
 
+    lateinit var mMoveBtn: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mDownLoadF1Btn = findViewById(R.id.main_down_f1_btn)
         mDownLoadF2Btn = findViewById(R.id.main_down_f2_btn)
+        mMoveBtn = findViewById(R.id.button)
 
         mDownLoadF1Btn.setOnClickListener { v ->
             downLoadDynamicModule("dynamic_feature")
@@ -39,6 +44,15 @@ class MainActivity : AppCompatActivity() {
         mDownLoadF2Btn.setOnClickListener { v ->
             downLoadDynamicModule("dynamic_feature2")
         }
+
+        mMoveBtn.setOnClickListener { v ->
+            onMove()
+        }
+    }
+
+    private fun onMove() {
+        val intent = Intent(this, MyLibActivity::class.java)
+        startActivity(intent)
     }
 
     private fun downLoadDynamicModule(moduleName: String) {
