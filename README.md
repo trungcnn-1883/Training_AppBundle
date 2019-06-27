@@ -22,7 +22,8 @@ Dạng format sẽ là .aab
 
 ### 3. Cấu trúc
  Với apk, người dùng có thể cài đặt trực tiếp lên thiết bị, nhưng với app bunlde thì lại không. App bunlde chứa một số nội dung mà apk không có. 
-
+ 
+<img src="img/app_12.png"/>
 
 - base/, feature1/, feature2/: đây là các module của app. Module cơ bản của app ở trong  base/. Để cầu hình đường dẫn cho feature1/, feature2/, ta cấu hình trong manifest của từng module, với thẻ split
 
@@ -36,24 +37,28 @@ Dạng format sẽ là .aab
 ### 4. .Aab vs apks
 ### Multiple APKs = apks
 
-
+<img src="img/app_11.png"/>
 
 ### 5. Dynamic delivery (Phân phối động)
 ### a. Giải thích
 Các tính năng,  cấu hình ban đầu: ngôn ngữ, độ phân giải màn hình, cấu trúc CPU
-
+<img src="img/app_13.png"/>
 
 
 Khi được cài lên device, apk sẽ lấy tất cả các tính năng, cấu hình đó để đưa vào apk, còn app bundle chỉ chọn những cái phù hợp để đưa vào
 
+<img src="img/app_14.png"/>
 
 
 ### Split apk được chia làm 3 loại
 - **Base apk:** APK này chứa code và resource mà tất cả các APK phân tách khác có thể truy cập và cung cấp chức năng cơ bản cho ứng dụng của bạn. Khi người dùng download ứng dụng của bạn chắc chắn có file APK này
 
 - **Configuration apk:** Mỗi APK trong số này bao gồm native libraries và resource cho từng cấu hình device cụ thể, nó sẽ tối ưu hóa nội dung APK theo dựa theo :
+
 Ngôn ngữ
+
 Mật độ màn hình
+
 Kiến trúc CPU
 
 Khi bạn build abb, theo mặc định, tất cả các phần tách sẽ được tạo, nhưng trong build.gradle, ta có thể khai báo những phần tách nào sẽ được tạo:
@@ -230,4 +235,5 @@ bundletool build-apks --device-spec=/MyApp/pixel2.json
 
 ### 3. Upgrade các ứng dụng đã có để sử dụng dynamic feature module
 Từ một module thường, ta có thể tạo cho nó thành dynamic module
+
 Làm các bước giống lúc tạo một module động
