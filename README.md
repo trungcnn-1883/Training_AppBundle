@@ -36,6 +36,13 @@ Dạng format sẽ là .aab
 
 ### 4. .Aab vs apks
 ### Multiple APKs = apks
+Multiapks:
+
+<img src="img/a.png"/>
+
+App bundle:
+
+<img src="img/b.png"/>
 
 <img src="img/app_11.png"/>
 
