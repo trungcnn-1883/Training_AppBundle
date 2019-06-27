@@ -12,7 +12,6 @@
             <option value="$PROJECT_DIR$/dynamic_feature" />
             <option value="$PROJECT_DIR$/dynamic_feature2" />
             <option value="$PROJECT_DIR$/mylibrary" />
-            <option value="$PROJECT_DIR$/nodynamic_module" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

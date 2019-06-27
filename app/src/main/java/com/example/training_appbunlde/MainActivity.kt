@@ -13,7 +13,6 @@ import com.google.android.play.core.splitinstall.SplitInstallRequest
 import com.google.android.play.core.splitinstall.model.SplitInstallErrorCode
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION
-import com.example.mylibrary.MyLibActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +27,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var mDownLoadF2Btn: Button
 
     lateinit var mMoveBtn: Button
+    lateinit var mMove1Btn: Button
 
+    private val CLASS_NAME_MODULE_1 = "com.example.dynamic_feature.DynamiFeatureActivity"
+    private val CLASS_NAME_MODULE_2 = "com.example.dynamic_feature2.ChatActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         mDownLoadF1Btn = findViewById(R.id.main_down_f1_btn)
         mDownLoadF2Btn = findViewById(R.id.main_down_f2_btn)
         mMoveBtn = findViewById(R.id.button)
+        mMove1Btn = findViewById(R.id.button1)
 
         mDownLoadF1Btn.setOnClickListener { v ->
             downLoadDynamicModule("dynamic_feature")
@@ -46,12 +49,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         mMoveBtn.setOnClickListener { v ->
-            onMove()
+            onMove(CLASS_NAME_MODULE_1)
+        }
+
+        mMove1Btn.setOnClickListener { v ->
+            onMove(CLASS_NAME_MODULE_2)
         }
     }
 
-    private fun onMove() {
-        val intent = Intent(this, MyLibActivity::class.java)
+    private fun onMove(name:String) {
+        val intent = Intent(this, Class.forName(name))
         startActivity(intent)
     }
 
