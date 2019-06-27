@@ -4,7 +4,7 @@
 ### 1. Giới thiệu
 Ở Google I/O 2018, một định dạng xuất bản mới đã được giới thiệu cho các ứng dụng Android có tên là Android App Bundle.
 
-Đây là một định dạng tải lên mới bao gồm tất cả các resource và code đã được compile, nhưng trì hoãn việc tạo APK và ký vào Google Play.
+Đây là một định dạng tải lên mới bao gồm tất cả các resource và code đã được compile, nhưng chưa tạo APK và ký vào Google Play.
 
  Nó sẽ ảnh hưởng đến cách chúng ta xây dựng và cấu trúc các ứng dụng của chúng ta theo một định dạng modules
 Dạng format sẽ là .aab
@@ -45,7 +45,7 @@ Các tính năng,  cấu hình ban đầu: ngôn ngữ, độ phân giải màn 
 <img src="img/app_13.png"/>
 
 
-Khi được cài lên device, apk sẽ lấy tất cả các tính năng, cấu hình đó để đưa vào apk, còn app bundle chỉ chọn những cái phù hợp để đưa vào
+Khi được cài lên device, apk sẽ lấy tất cả các tính năng, cấu hình đó để đưa vào apk, còn Dynamic delivery chỉ chọn những cái phù hợp để đưa vào
 
 <img src="img/app_14.png"/>
 
