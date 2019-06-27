@@ -165,6 +165,7 @@ Sau khi bạn xây dựng Gói ứng dụng Android, bạn nên kiểm tra cách
  bundletool build-apks 
  
  **--bundle**=/home/nguyen.ngoc.trungc/AndroidStudioProjects/Training/Training_AppBunlde/app/build/outputs/bundle/debug/app.aab 
+ 
  **--output**=/home/nguyen.ngoc.trungc/AndroidStudioProjects/Training/Training_AppBunlde/app/build/outputs/bundle/debug/my_app.apks
 ```
 
