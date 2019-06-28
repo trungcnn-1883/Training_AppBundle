@@ -176,6 +176,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        splitInstallManager.registerListener(splitInstallStateUpdatedListener)
     }
 
     private fun showMessage(message: String) {
